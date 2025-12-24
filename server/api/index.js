@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
     res.send('Agritech API is running...');
 });
 
+app.get('/api', (req, res) => {
+    res.send('Agritech API (Base) is running...');
+});
+
 // Database Connection
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log('MongoDB Connected'))
